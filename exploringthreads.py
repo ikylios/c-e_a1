@@ -2,9 +2,6 @@ import threading
 import time
 import numpy as np
 
-# Inside the thread you are expected to 
-# add the first N (1 < N < 1000) numbers in the array 
-# provided as an argument from function spawning the threads.
 def thread_function(upto):
   np.sum(np.arange(upto))
 
