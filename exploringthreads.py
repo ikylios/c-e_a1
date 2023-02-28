@@ -12,10 +12,11 @@ times = []
 i = 0
 
 while (i <= 1000):
-
   start = time.time()
-  x = threading.Thread(target = thread_function(i))
+  upto = np.random.randint(1000)
 
+  x = threading.Thread(target = thread_function(upto))
+#  thread_function(upto)
   x.start()
 
   x.join()
@@ -26,7 +27,7 @@ while (i <= 1000):
   
   i = i+1
 
-print('avg: ', np.average(times))   # 7.062144093699269e-05
-print('min: ', np.min(times))       # 4.649162292480469e-05
-print('max: ', np.max(times))       # 0.0006959438323974609
-print('std. dev.: ', np.std(times)) # 3.9885827680166593e-05
+print('avg: ', np.average(times))   
+print('min: ', np.min(times))       
+print('max: ', np.max(times))       
+print('std. dev.: ', np.std(times)) 
